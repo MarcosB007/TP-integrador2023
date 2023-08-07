@@ -1,0 +1,134 @@
+.colorHeader {
+    background-color: rgb(64, 67, 73);
+}
+
+.textHeader {
+    font-size: 17px;
+}
+
+.imgPrincipal {
+    background-image: url(../Imagenes/ba1.png);
+    height: 93vh;
+    background-position: center;
+    background-size: cover;
+    background-color: rgb(51, 51, 51);
+    background-blend-mode: soft-light;
+    margin-bottom: 1em;
+}
+
+.textImgPrincipal {
+    margin-right: 7em;
+}
+
+.btnOradores {
+    padding: 0px 4px 0px 4px;
+}
+
+h4 {
+    font-size: 13px;
+    color: rgb(107, 107, 107);
+}
+
+h5 {
+    font-size: 11px;
+}
+
+.bgFecha {
+    background-color: rgb(62, 62, 70);
+    
+}
+
+.imagenLugar {
+    padding-left: 0px;
+    padding-right: 1px;
+}
+
+.letraPequeña {
+    font-size: 13px;
+}
+
+#pos {
+    position: relative;
+}
+
+@media screen and (max-width: 379px) {
+    .bgFecha {
+        background-color: transparent;
+    }    
+    #pos {
+        position: absolute;
+    }
+
+    .estilosFooter {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer div a {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    
+    .estilosFooter {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    footer div a {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+    .estilosFooter {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    footer div div div div {
+        display: flex;
+        justify-content: center;
+    }
+
+    footer div a {
+        margin-bottom: 10px;
+    }
+}
+
+.btnFecha {
+    padding: 3px 5px 3px 5px;
+    font-size: 13px;
+    border-radius: 5%;
+}
+
+.btnEnviar {
+    background-color: rgb(160, 238, 43);
+    border: 0;
+    border-radius: 3px;
+}
+
+#colorBoton:hover {
+    background-color: rgb(120, 197, 5);
+}
+
+.subrayadoPunteado {
+    text-decoration-style: dotted;
+}
+
+footer div a {
+    color: white;
+    text-decoration: none;
+}
+
+.estilosFooter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bgFooter {
+    background-color: rgb(35, 65, 97);
+}

@@ -1,0 +1,177 @@
+.textHeader {
+    font-size: 17px;
+}
+
+.colorHeader {
+    background-color: rgb(64, 67, 73);
+}
+
+.header{
+    padding: .1em !important;
+}
+
+.margenTarjetas {
+    margin-top: 7em;
+}
+
+.posicionTarjetas{
+    width: 22%;
+    padding: 1.3rem 0.7rem 1rem 0.7rem;
+    margin-right: .5rem;
+}
+
+.letraPequeña{
+    font-size: 15px;
+    color: grey;
+}
+
+.estudiante{
+    outline: 2px solid rgb(30, 188, 245);
+}
+.trainee{
+    outline: 2px solid rgb(39, 210, 39);
+}
+.junior{
+    outline: 2px solid rgb(246, 188, 42);
+}
+
+#posDiv{
+    position: relative;
+    justify-content: center;
+}
+.venta {
+    font-size: 13px;
+}
+
+.letraDescuento{
+    font-size: 18px;
+}
+
+.contenedor {
+    position: relative;
+    justify-content: center;
+    width: 86%;
+    margin-left: 94px;
+}
+
+.btnsBorrarResumen {
+    width: 48.5%;
+    background-color: rgb(141, 193, 78);
+    border: 0;
+}
+
+.btnsBorrarResumen:hover{
+    background-color: rgb(99, 170, 12);
+}
+
+.totalAPagar{
+    background-color: rgb(184, 228, 255);
+    border-radius: 5px;
+    font-size: 17px;
+    padding: 1em;
+}
+
+.bgFooter {
+    background-color: rgb(35, 65, 97);
+}
+
+.estilosFooter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer div a {
+    color: white;
+    text-decoration: none;
+}
+
+.buscar{
+	display: flex;
+}
+
+.form{
+	display: flex;
+}
+
+.margenFooter{
+	margin-bottom: 5em;
+}
+
+@media screen and (max-width: 379px){
+    
+    #posDiv{
+        align-items: center;
+        position: relative;
+        flex-direction: column;
+    }
+
+    .posicionTarjetas{
+        width: 60%;
+        padding: 1.3rem 0.7rem 1rem 0.7rem;
+        margin-bottom: .5rem;
+    }
+
+    .contenedor {
+        position: relative;
+        width: 86%;
+        margin-left: 20px;
+    }
+
+    .estilosFooter {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer div a {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    
+    #posDiv{
+        align-items: center;
+        position: relative;
+        flex-direction: column;
+    }
+
+    .posicionTarjetas{
+        width: 70%;
+        padding: 1.3rem 0.7rem 1rem 0.7rem;
+        margin-bottom: .5rem;
+    }
+
+    .contenedor {
+        position: relative;
+        width: 86%;
+        margin-left: 20px;
+    }
+
+    .estilosFooter {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer div a {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+    .estilosFooter {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    footer div div div div {
+        display: flex;
+        justify-content: center;
+    }
+
+    footer div a {
+        margin-bottom: 10px;
+    }
+}
+

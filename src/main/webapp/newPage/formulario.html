@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprar tickets</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilosFormulario.css">
+
+</head>
+<body>
+    
+    <!-- header -->
+    <nav class="navbar navbar-expand-md colorHeader navbar-dark fixed-top navbar-main header">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+            <img src="../Imagenes/codoacodo.png" alt="Logo" height="55" class="d-inline-block align-text-center">
+            Conf Bs As
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto textHeader">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="#">La conferencia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#losOradores">Los oradores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#lugarFecha">El lugar y la fecha</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#registrarse">Conviértete en orador</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-success" href="#" > Comprar tickets</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Estudiante, Trainee, Junior -->
+    <div class="container margenTarjetas">
+        <div id="posDiv" class="row">
+            <div class="estudiante posicionTarjetas text-center">
+                <h3>Estudiante</h3>
+                <p class="mt-3 letraDescuento">Tienen un descuento</p>
+                <h5 class="fs-5 mt-4">80%</h5>
+                <p class="letraPequeña mt-4">*presentar documentacion</p>
+            </div>
+            <div class="trainee posicionTarjetas text-center">
+                <h3>Trainee</h3>
+                <p class="mt-3 letraDescuento">Tienen un descuento</p>
+                <h5 class="fs-5 mt-4">50%</h5>
+                <p class="letraPequeña mt-4">*presentar documentacion</p>
+            </div>
+            <div class="junior posicionTarjetas text-center">
+                <h3>Junior</h3>
+                <p class="mt-3 letraDescuento">Tienen un descuento</p>
+                <h5 class="fs-5 mt-4">15%</h5>
+                <p class="letraPequeña mt-4">*presentar documentacion</p>
+            </div>
+        </div>
+    </div>
+    <!-- Venta -->
+    <div class="text-center">
+      <p class="mt-1 mb-0 venta">VENTA</p>
+      <h2>VALOR DE TICKET $200</h2>
+    </div>
+    
+    <div class="buscar pagForm">
+		<form action="tickets.jsp" class="form">
+			<button type="submit" class="btn btn bg-primary" >Buscar</button>
+			<input class="form-control" type="text" name="txtbuscar" placeholder="Ingresa tu email">
+		</form>
+	</div>
+
+    <!-- Formulario -->
+    <div class="contenedor formulario mb-3">
+      <form action="cargaFormulario.jsp" method="POST">
+        <div class="row g-3 justify-content-center">
+          <div class="col-lg-4 col-sm-6">
+            <input id="nombre" type="text" name="nombre" class="form-control" placeholder="Nombre" aria-label="First name" required>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <input id="apellido" type="text" name="apellido" class="form-control" placeholder="Apellido" aria-label="Last name" required>
+          </div>
+          <div class="col-lg-8 col-sm-12">
+            <input id="correo" type="email" name="mail" class="form-control" placeholder="Correo" required>
+          </div>
+          <input type="hidden" name="monto" id="total_input">
+          
+          <div class="row g-3 justify-content-center ">
+                <div class="col-lg-4 col-sm-6">
+                    <label class="form-label">Cantidad</label>
+                    <input id="valor" type="text" name="cantidad" class="form-control" placeholder="Cantidad" aria-label="Cant" required>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <label class="form-label">Categoria</label>
+                    <select id="categoria" class="form-select" name="categoria" aria-label="Default select example" required>
+                        <option value="1">Estudiante</option>
+                        <option value="2">Trainee</option>
+                        <option value="3">Junior</option>
+                    </select> 
+                    
+                </div>
+            </div>
+            <div class="row g-3 col-lg-8 col-sm-12 justify-content-center d-flex justify-content-between">
+                <div>
+                    <p id="total" class="display-4 totalAPagar fw-semibold">Total a Pagar: $</p>
+                </div class="row">
+                <button id="botonLimpiar" class="btn btn-primary col-lg-4 btnsBorrarResumen" type="button">Borrar</button>
+                <button id="botonResumen" class="btn btn-primary col-lg-4 btnsBorrarResumen" type="submit" onclick="return confirmar()">Confirmar</button>
+                <script>
+					function confirmar() {
+						var confirmacion = confirm("Confirmar compra");
+						if(confirmacion){
+							return true;
+						}else{
+							return false;
+						}
+					}
+				</script>
+            </div>
+            
+        </div>
+      </form>
+    </div>
+    <!-- Footer -->
+    <footer class="bgFooter p-4">
+        <div class="container">
+          <div class="row">
+            <div class="estilosFooter">
+              <!-- d-flex justify-content-between flex-column -->
+              <div class="col-lg-1 col-sm-12 mb-2"><a href="#">Preguntas frecuentes</a></div>
+              <a href="#">Contáctanos</a>
+              <a href="#">Prensa</a>
+              <a href="#">Conferencias</a>
+              <div class="col-lg-1 col-sm-12 mb-2"><a href="#">Términos y condiciones</a></div>
+              <a href="#">Privacidad</a>
+              <a href="#">Estudiantes</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
